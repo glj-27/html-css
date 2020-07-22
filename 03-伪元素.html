@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>位元素</title>
+		<style type="text/css">
+			
+			/**
+			 * ::first-letter 第一个字幕
+			 * 
+			 * ::fist-line    第一行
+			 * 
+			 * ::first-selection  选中的内容(拖拽鼠标)
+			 *
+			 * -------------------------------------
+			 * ::bofore       元素之前
+			 * 
+			 * ::after        元素之后
+			 * 
+			 * - 这两个位元素必须结合content属性使用
+			 * -  这个位置的content是没有办法被选中的
+			 *
+			 */
+			
+			p::first-letter{
+				font-size: 30px;
+			}
+			
+			p::first-line{
+				background-color: aqua;
+			}
+			
+			p::selection{
+				background-color: aquamarine;
+			}
+			
+			div::before{
+				content: "123";
+				color: pink;
+			}
+			
+			div::after{
+				content: "456";
+				color: deeppink;
+			}
+			
+			q::after{
+				/* 将q的后引号改为 哈哈 */
+				content: "哈哈";
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<!-- 
+			q标签标识短语 
+			会默认添加引号 
+		  - 这个引号就是通过
+		-->
+		<q>hello</q>
+		
+		<div>
+			Hello, how are you
+		</div>
+		
+		<p>I think you are a good man can help some people helpless.
+		   I think you are a good man can help some people helpless.
+		   I think you are a good man can help some people helpless.</p>
+		
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>字体</title>
+		<style type="text/css">
+			
+			/*
+				@font-face可以将服务器中的字体直接提供给用户使用
+				问题：
+					1.加载慢
+					2.版权
+			*/
+			@font-face {
+				/* 指定的字体名字 */
+				font-family: myFont;
+				
+				/* 服务器中的字体路径 */
+				src: url(./font/myFount.ttf);
+			}
+			
+			p{
+				font-size: 200px;
+				/*
+					- 字体：font-family
+					- 类型如下：包含很多字体
+					- 属性：serif         衬线字体
+							sans-serif    非衬线字体
+							monospace     等宽字体
+							cursive       草书字体
+							fantasy       虚幻字体
+							
+					        
+				*/
+				font-family: monospace;
+				color: #FF1493;
+				/*
+					一般情况下，会先设置自己定义的字体，后面加一个类型字体
+					font-family: Microsoft YaHei,HeiTi SC,tohama,sans-serif;
+				*/
+			}
+		</style>
+	</head>
+	<body>
+		<p>我不知道这是什么东西 23333  hahahahahiiihhhhllll</p>
+	</body>
+</html>

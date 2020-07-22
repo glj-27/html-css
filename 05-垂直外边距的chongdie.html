@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>垂直外边距的重叠</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			div{
+				width: 100px;
+				height: 100px;
+			}
+			
+			/* 垂直外边距取两者中最大的一个值， 
+			   当一个出现负值时，则会将两者相加
+			*/
+			
+			.box1{
+				background-color: #00FFFF;
+				margin-bottom: 100px;
+			}
+			
+			.box2{
+				background-color: #7FFFD4;
+				margin-top: 120px;
+			}
+			
+			.box3{
+				background-color: #808080;
+				
+				/*2.于是设置paddingTop，并且减小height*/
+				/* padding-top: 50px;
+				height: 50px; */
+			}
+			
+			.box4{
+				background-color: #FF1493;
+				width: 50px;
+				height: 50px;
+				/* 1.将粉红色div移动到灰色的左下角*/
+				/*margin-top: 50px;*/      /* 这样处理后，父元素一起移动了 */
+				/* 3.飘起来*/
+				float: left;
+				margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3">
+			
+			<div class="box4"></div>
+			
+		</div>
+	</body>
+</html>

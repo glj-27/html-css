@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渐变色</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      /* 
+        渐变背景：
+        - 线性渐变，颜色沿着一条直线发生变化
+          linear-gradient(red, yellow) 由上到下
+          background-image: linear-gradient(to right, red, yellow);
+          可以添加一个参数来定义方向：
+            - to left
+            - to right
+            - to top
+            - to bottom
+            - 叠加 to left top
+            - 45deg：45度
+            - 0.5turn：标识圈,转半圈
+          可以添加多个颜色
+       */
+      background-image: linear-gradient(.5turn,red, yellow);
+    }
+
+    .box1{
+      width: 100px;
+      height: 100px;
+      /* background-image: linear-gradient(to right bottom, red, yellow,orange, pink,blue); */
+      background-image: linear-gradient(to right, red 20px, yellow 70px);
+    }
+
+    .box2{
+      width: 100px;
+      height: 100px;
+      /* 
+        可以平铺的线性渐变：
+        从第一个位置到第二个位置渐变，其余平铺渐变
+       */
+      background-image: repeating-linear-gradient(red 10px,yellow 20px);
+      background-repeat: no-repeat; /* 对渐变平铺不起作用 */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="box1"></div>
+  <div class="box2"></div>
+
+</body>
+</html>

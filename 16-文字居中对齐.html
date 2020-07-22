@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文字居中对齐</title>
+		<style type="text/css">
+			#box1{
+				width: 60px;
+				height: 200px;
+				text-align: justify; /* 参数left, center justify两端对齐 */
+				
+				border: 1px pink solid;
+			}
+			
+			#box2{
+				border: 1px red solid;
+				font-size: 20px;
+			}
+			#box2 span{
+				border: 1px green solid;
+				font-size: 10px;
+				/*
+					vertical-align垂直居中
+					参数:
+					baseline:基线对齐
+					top:顶边对齐
+					middle:小写字幕的中心位置
+					数值:相应偏移
+				*/
+				vertical-align: middle;
+			}
+			p{
+
+				border: 1px red solid;
+	
+			}
+			img{
+				
+				/*
+				图片与边框之间有缝隙,
+				因为图片也是默认基线对齐
+				*/
+				width: 300px;
+				height: 200px;
+				vertical-align: bottom;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			啊,我的奶爸伟,大伟大阿瓦,达阿瓦达阿,瓦大王,的阿瓦达啊,我
+		</div>
+		<div id="box2">
+			你好friend<span>你好friend</span>
+		</div>
+		<p><img src="./Pictures/01.jpg" ></p>
+	</body>
+</html>

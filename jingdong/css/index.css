@@ -1,0 +1,122 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+}
+
+ul li{
+	list-style: none;
+}
+
+/* 如果不设置高度解决漂浮后的高度塌陷 */
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.top-bar a,
+.top-bar span,
+.top-bar i{
+	font-size: 12px;
+	text-decoration: none;
+	color: #999;
+}
+
+.top-bar-wrapper{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #e3e4e5;
+	border-bottom: 1px #ddd solid;
+}
+
+.top-bar{
+	width: 1190px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+
+.top-bar a:hover{
+	color: #f10215;
+}
+
+.top-bar .highlight{
+	color: #f10215;
+}
+
+.location{
+	float: left;
+}
+
+.location:hover{
+	
+}
+
+.location .fas{
+	font-size: 14px;
+	color: #f10215;
+}
+
+.location .all-city{
+	width: 320px;
+	height: 460px;
+	padding: 10px;
+	background-color: #fff;
+	border: 1px solid rgb(204, 204, 204);
+	display: none;
+	position: absolute;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+	top: 31px;
+	z-index: 999;
+}
+
+.location .all-city a{
+	display: inline-block;
+	width: 44px;
+	height: 28px;
+	padding: 0 8px;
+}
+
+
+.location:hover .all-city{
+	display: block;
+}
+
+.current-city{
+	padding: 0 10px;
+	position: relative;
+	z-index: 9999;
+	border: 1px solid transparent;
+}
+
+.location:hover .current-city{
+	background-color: #fff;
+	border: 1px solid rgb(204, 204 ,204);
+	border-bottom: none;
+	padding-bottom: 1px;
+}
+
+.shortcut{
+	float: right;
+}
+
+.shortcut .line{
+	width: 1px;
+	height: 10px;
+	background-color: #cccccc;
+	margin: 12px 12px 0;
+}
+
+.shortcut li{
+	float: left;
+}
+
+
+
+
+

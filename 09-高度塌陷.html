@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>高度塌陷</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;	
+			}
+			
+	/************************************ 1.高度塌陷解决方案 ************************************/
+			.outer{
+				border: 10px red solid;
+				/* 父元素高度由子元素撑开 */
+				
+				/*
+					BFC(block formatting context) 块级格式化环境
+					- BFC是一个CSS属性中的隐藏属性,可以为一个元素开启BFC
+					- 开启BFC后,元素将变成一个独立的布局区域
+					
+					- 开启BFC属性的特点
+					 1. 开启BFC的元素不会被浮动元素覆盖
+					 2. 开启BFC的元素子元素和父元素边框不会重叠
+					 3. 开启BFC的元素可以包含浮动的子元素
+					
+					- 可以通过一些特殊的方式开启元素的BFC
+					1. 设置元素的浮动
+					2.设置元素为行内块元素
+					
+				*/
+			   /* 1.浮动 */
+			   /* float: left; */
+			   
+			   /* 2.设置元素为行内块元素 */
+			   /* display: inline-block; */
+			   
+			   /* 3.将元素的overflow: 非visible; */
+			   overflow: hidden;
+			  
+			   
+			}
+			
+			.inner{
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				float: left;
+				/*
+				子元素设置浮动时,
+				父元素高度默认时子元素高度, 浮动后, 子元素脱离文本流,
+				没有内容将其撑开,父元素高度丢失,发生高度塌陷
+				
+				下方的元素会自动上移,导致也页面布局混乱
+				*/
+			}
+			
+			/* .other{
+				width: 100px;
+				height: 100px;
+				background-color: green;
+			} */
+			
+	/******************************************* 2.BFC *****************************************/
+			.box1{
+				width: 200px;
+				height: 200px;
+				background: skyblue;
+				overflow: hidden;   /* 开启BFC后, box2成功下移 */
+			}
+			
+			.box2{
+				width: 100px;
+				height: 100px;
+				background: #7FFFD4;
+				margin-top: 100px;   /* 由于和父元素外边距重叠, box1下移*/
+			}
+	
+	/***************************************** 3.clear ****************************************/
+			.box3{
+				width: 100px;
+				height: 100px;
+				background: #FF1493;
+				float: left;
+			}
+			
+			.box4{
+				width: 200px;
+				height: 200px;
+				background: #808080;
+				float: right;
+			}
+			
+			.box5{
+				width: 100px;
+				height: 100px;
+				background: #FFC0CB;
+				/* 
+				由于box3浮动, box5发生上移 
+				
+				如果不想box5受到影响
+				
+				- clear
+				   使用clear属性进行清楚浮动元素的影响
+				   - 参数:
+				   left: 清除左侧浮动元素的影响
+				   right: 清除右侧浮动元素的影响
+				   both: 清除两侧影响较大元素的影响
+				
+				- 原理
+					设置清楚浮动以后, 浏览器会自动为元素添加一个上外边框,以使其位置不受影响
+					即:给box5设置了一个高度为box3高度的外边框
+				
+				*/
+				/* clear: left;   /* 清除左侧的浮动,box5移动到box3下面 */
+				clear: right;  /* 清除右侧的浮动,box5移动到box2下面 */ */
+				clear: both;  /* 相当于左右都加*/
+			}
+			
+			/********************************** 4.高度塌陷最终解决方案 **************************/
+			.outer1{
+				border: 10px solid #008000;
+			}
+			
+			.inner1{
+				width: 100px;
+				height: 100px;
+				background: #00FFFF;
+				float: left;
+			}
+			
+			/* 1.由inner2撑起来  但是通过html标签撑起的*/
+			.inner2{
+				clear: both;
+			}
+			
+			/* 2.使用伪元素  这样就只是用css*/
+			.outer1::after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<p>1.高度塌陷解决方案</p>
+		<div class="outer">
+			<div class="inner"></div>
+			
+		</div>
+		<!-- <div class="other">
+			other
+		</div> -->
+		<p style="clear: both;">2.BFC</p>
+		<div class="box1">1
+			<div class="box2">2</div>
+		</div>
+		<p>3.clear</p>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">5</div>
+		<p>4.高度塌陷最终解决方案</p>
+		<div class="outer1"> 
+			<div class="inner1"></div>
+			<!-- <div class="inner2">删除这里的内容即可</div> -->
+		</div>
+	</body>
+</html>

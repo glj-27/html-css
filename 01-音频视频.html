@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>音频视频</title>
+	</head>
+	<body>
+		
+		 <!--                            audio标签
+			controls:控制
+			autoplay:自动播放
+				- 一般浏览器不会自动播放
+			loop    :循环播放
+			在audio标签中写入文字，在不支持audio的情况下就会显示不支持的文字
+		  -->
+		
+		<audio src="./source/我们的爱%20-%20飞儿乐团.mp3" controls="controls" loop="loop">
+			当前浏览器不支持audio
+		</audio>
+		<audio controls>
+			当前浏览器不支持audio
+			
+			<!-- 
+				这样写可以引入多个资源，来防止不支持mp3的情况
+			 -->
+			<source src="./source/我们的爱%20-%20飞儿乐团.mp3" ></source>
+			<source src="./source/我们的爱%20-%20飞儿乐团.ogg" ></source>
+			<embed src="./source/我们的爱%20-%20飞儿乐团.mp3" type="audio/mp3" width="600px" height="100px">
+		</audio>
+		
+		<!-- 
+			怎么支持IE8
+			支持所有浏览器
+			会自动播放
+		 -->
+		<!-- <embed src="./source/我们的爱%20-%20飞儿乐团.mp3" type="audio/mp3" width="600px" height="100px"> -->
+		
+		<!-- 
+			使用方法
+		 -->
+		<video width="500" height="400px" controls>
+			<source src="./source/close.mp4" type="video/mp4"></source>
+			<embed src="./source/close.mp4" type="video/mp4" width="600px" height="100px">
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>
+	</body>
+</html>

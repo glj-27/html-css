@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单</title>
+</head>
+<body>
+  <h1></h1>
+  <form action="23-target.html">
+    <!-- 
+      文本框
+      - 数据提交 到服务器中，必须要为元素指定一个name属性
+      - autocomplete：off关闭历史输入
+      - readonly 将表单设置为只读：数据会提交
+      - disabled 将表单设置为禁用：数据不会提交
+      - autofocus 设置表单自动获取焦点
+      -->
+    账号：<input type="text" name="username" value="填写账号" autocomplete="off">
+    <!-- 密码框 -->
+    <br>
+    密码：<input type="password" name="password" value="只读" readonly>
+    <!-- 提交 -->
+    <br><br>
+    <input type="submit" value="注册">
+    <!-- 重置 -->
+    <input type="reset">
+    <!-- 普通按钮 -->
+    <input type="button" value="普通button">
+    <br><br>
+    颜色选择框：<input type="color">
+    <br><br>
+    邮件框（会对格式进行检查）<input type="email" disabled>
+    <br><br>
+    手机：<input type="text" value="自动获取焦点" autofocus>
+    <br><br>
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+    <button type="button">普通按钮</button>
+
+    <br><br>
+    <!-- 
+      - 单选框必须指定一个value属性，value属性最终会作为用户填写的值
+      - checked可以使得单选框默认选中
+     -->
+    单选框：A<input type="radio" name="select" value="A">
+           B<input type="radio" name="select" value="B" checked>
+    
+    <br><br>
+    多选框：1 <input type="checkbox" name="test" value="1">
+            2 <input type="checkbox" name="test" value="2">
+            3 <input type="checkbox" name="test" value="3">
+    <br><br>
+    <select name="selTest">
+      <option value="1">1</option>
+      <option value="ii">2</option>
+      <option selected value="iii">3</option>
+      <option value="iiii">4</option>
+    </select>
+  </form>
+</body>
+</html>

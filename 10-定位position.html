@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位positio</title>
+		<style type="text/css">
+			body{
+				height: 5000px;
+			}
+			.box1{
+				width: 400px;
+				height: 100px;
+				background-color: pink;
+				margin: 300px auto 0 auto;
+				/* 
+					定位：position
+					- 1.相对定位：relative
+						灵魂出窍，所占用的位置还在
+						参照：原来所在的位置
+					
+					- 2.绝对定位：absolute
+						肉体灵魂全部飘起来，不占用原来位置
+						参照：最近的开启定位的祖先元素 / html
+					
+					- 3.固定定位：fixed
+						肉体灵魂全部飘起来，不占用原来位置，且位置固定
+						参照：相对于浏览器视口 viewport 
+					
+					- 4.粘滞定位：sticky
+						与relative相似，设置指定位置，使其到达指定位置时固定
+						缺点：兼容性不好
+				 */
+				position: sticky;
+				top: 0;
+				
+				/*
+				元素的  left + margin-left + border-left + padding-left + 
+						width + 
+						padding-right + border-right + margin-right + right = 父元素的宽度
+				优先调整：auto > right > margin-right
+				每个属性的默认值为 auto 
+				*/
+			}
+			
+			.box2{
+				width: 100px;
+				height: 100px;
+				background-color: #00FFFF;
+				position: absolute;
+				top: 0px;
+				
+				/* 
+					- 元素的层级：优先显示值越大的，层级一样时，优先显示最下面的
+					- 祖先元素的层级再高也不会盖住后代元素
+				 */
+				z-index: 1;
+			}
+			
+			.box3{
+				width: 100px;
+				height: 100px;
+				background-color: #7FFFD4;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				z-index: 2;
+				opacity: 0.5;
+			}
+			
+			.box4{
+				width: 100px;
+				height: 100px;
+				background-color: #FFC0CB;
+				position: absolute;
+				top: 40px;
+				left: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			1
+		</div>
+		<br>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+	</body>
+</html>

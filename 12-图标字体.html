@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图标字体</title>
+		<link rel="stylesheet" type="text/css" href="./font/css/all.css"/>
+		<style type="text/css">
+			ul{
+				list-style: none
+			}
+			
+			li::before{
+				content: "\f179";
+				font-family: 'Font Awesome 5 Brands';
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		 图标字体：不会失真
+			- 在网页中的经常使用的图标们，可以通过图片引入图标
+			  但图片大小较大，并且非常的不灵活
+			- 所以在使用图标时，可以直接将图标设置成字体，
+			  然后通过font-face的形式来对字体进行引入
+			- 这样我们可以通过使用字体的形式来使用图标
+		 -->
+		 
+		 <!-- 
+		 1.下载font awesome
+		 2.将css和font文件夹复制到项目目录中
+		 3.映引入css
+		 4.使用图标字体
+		  -->
+		 <i class="fa fa-bell" style="font-size: 100px; color: #00FFFF;"></i>
+		 <ul>
+		 	<li>莫欺少年穷</li>
+		 	<li>莫欺少年穷</li>
+		 	<li>莫欺少年穷</li>
+		 	<li>莫欺少年穷</li>
+		 	<li>莫欺少年穷</li>
+		 </ul>
+	</body>
+</html>

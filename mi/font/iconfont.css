@@ -1,0 +1,33 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1594806200075'); /* IE9 */
+  src: url('iconfont.eot?t=1594806200075#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAARUAAsAAAAACPgAAAQFAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqFEIQ5ATYCJAMUCwwABCAFhG0HThvLBxEVnI/Jviiwm4kNp7VbBdlz0W8jRJixd7S1uJHnQfA8tvX+SW7g0QQqpspU1VYisvqqKxsePm/vty3oEt75LiyaBph2l2ZhJBEUAJuboX4ZFaFYkvPgf/mOpIQC4UJ+usEJBMxhBGGWvg32/xwzXj3fgPLbbC7ZQXsDHCXQgCLyrMjuQO6A+Iaxy4u8DQVYcitJNWzcsiMBBn2RAtTIYUP6ESSUmAqsIpD4BTsNajWFQC/Rj8Aq7+fVj7QIQOMJ+l1tBzcaSN1v5LvyEifjQ2Le4fQA2wcClAQG1PhC40gkCJYkWPnvDHUBS4BGfyPf1PrGXz6ZVLgbElvDCHqQfzwDykcXhhBTN2Tgm2RRoOGbTUBW9EMKFHzX2A9G6Dk7LOCA16gUdHFBb7TCIEjuOlGoIrglR5pohtWxtRuVssA3il2/NcuQTcsyDdqQcf36GRs32tRL1yOmizr27R7H2N2u2/rjfFPJXXqZJ5HZrc/In5PYymH2ARsOZemyaVPmrm7Zkfhw/fKjiWMuXLYl3gzXuQFv3nR++7bL69edXr3q6Fn0gJ6kF6ybtrR456OJW8uKdToSXx8jyvZwKTnO5DZlkUSW6MLzXDqmt/H6pcoyS5Dnlm1giOKMCZy3yU1v98R62edozm33fut5I7LXi9sOKlwruAL2K52KpAnUaB3tLy5r+Kvz3a/hz2XOPy/Qv9KE9AtcMkOzTuep0/4pmNlL39dvm7+kbfVVqzRe/rYpfdPv8MyNQ14U2FO8Wq0fkUq2L9YR2UU6dNLDNdFv2X+L4Hjurvvk/TvZJ3vfv7d5guiQtw/TYcwMvW+fnm7w9gUWmS4cDU/MWSB31rT3qkoXKJPOPS0/d88NqlGvXo3VK9+v5Led1da7RnxR3wrjYBg/o633nxSQbHFH03aWFNAd/6o0VPL8hImp6FdJFX0BIOf1USQjt6SuYr6m9/4rv8NJXcncJ03NvwNnAPi4/HbZcyZjaB4K0MBYfwarYZNROLrKM1K9xZRMHt1iSrTcYYH/wZrel2HEmRqngyIgUwSaFHKBEFAQYTAlwcNREXwC6oClhCb7HRmMR1AmFVDcAgCKtE6BJjW3QEjrMcJgPoNHZj+DT9oQsHRWGU50CjX40hWdYQT/Aw6ykqmxi595xfSancY5Hv6JurMHmrJORwZcUYdYs79Ta0ZAKgv04D6cZ4FNZcJg5Wi2dVVFRV9UBlmKi67oDCPwP8BBVnLa2yXz/VdMr9lpRUOZ+om68/CgUaobIAbh2qjhUsbv79QyIzyPVBbQQz3ORlDAVjxtwmClsYN/61SoFTUVltOLl3s8AFj6O3ihlSijPOWTL1nw+LD7O24u5NYU3cQO/5AOyMJFAQAAAA==') format('woff2'),
+  url('iconfont.woff?t=1594806200075') format('woff'),
+  url('iconfont.ttf?t=1594806200075') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1594806200075#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e6b9";
+}
+
+.icon-xiazai1:before {
+  content: "\e603";
+}
+
+.icon-fangdajing:before {
+  content: "\e63d";
+}
+
+.icon-xiaomi:before {
+  content: "\e832";
+}
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>径向渐变</title>
+  <style>
+
+    .box{
+      width: 200px;
+      height: 200px;
+      /*
+        径向渐变，由中心向四周放射
+        - radial-gradient
+        - 默认情况下,径向渐变的形状根据元素的形状来计算的
+            正方形：圆形
+            长方形：椭圆
+            - 也可以手动调整径向渐变的大小
+            circle 正圆
+            elipse 椭圆
+        - 语法：
+            radial-grandient(大小 at 位置, 颜色 位置)
+            - 大小：
+              circle 圆形
+              ellipse 椭圆
+              closest-side 近边
+              closest-corner 近角
+              farthest-side 远边
+              farthest-corner 远角
+            - 位置：
+              top right left bottom center
+
+      */
+      background-image: radial-gradient(closest-corner at 50px 50px, red, yellow);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
